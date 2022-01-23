@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: MonumentGrotesk;
+    src: url(MonumentGrotesk-Regular.otf);
+}
+
+@font-face {
+    font-family: MonumentGrotesk-Italic;
+    src: url(MonumentGrotesk-Italic.otf);
+}
+
+body {
+    font-family: MonumentGrotesk;
+    font-size: 36px;
+    padding: 12px;
+}
+
+#top-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+#key {
+    font-family: MonumentGrotesk;
+    font-size: 16px;
+    width: 30%;
+}
+
+#container {
+    /* display: flex; */
+    width: 100vw;
+    padding: 100px 0;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:flex-start;
+}
+
+#log {
+    margin-top: 12px;
+}
+
+#clickhere {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#clickhere, #clear {
+    display: none;
+}
+
+#clear:hover {
+    color: red;
+    cursor: crosshair;
+}
+
+#cursor {
+    font-size: 36px;
+    display: inline;
+}
+
+.space {
+    display: inline-block;
+    width: 50px;
+    height: 106px;
+}
+
+footer {
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
