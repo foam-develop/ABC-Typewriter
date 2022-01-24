@@ -26,7 +26,7 @@ function typeWriter() {
 setTimeout(typeWriter, 1650);
 
 var j = 0;
-var title = 'ABC de Cana Typewriter';
+var title = 'ABC da Cana Typewriter';
 var speedTitle = 75;
 
 function typeWriterTitle() {
