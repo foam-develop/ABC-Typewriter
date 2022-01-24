@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover {
+    color: red;
+    cursor: crosshair;
+}
 @font-face {
     font-family: MonumentGrotesk;
     src: url(MonumentGrotesk-Regular.otf);
@@ -20,6 +29,9 @@ body {
     padding: 12px;
 }
 
+.italic {
+    font-family: MonumentGrotesk-Italic;
+}
 #top-header {
     display: flex;
     flex-direction: row;
