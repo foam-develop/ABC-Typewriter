@@ -45,7 +45,7 @@ click.onclick = function () {
 
 // For mobile
 click.addEventListener('click', function(e) {
-    log.focus();
+    document.focus();
     console.log("mobileworks?");
 }); 
 
