@@ -44,8 +44,9 @@ click.onclick = function () {
 }; 
 
 // For mobile
-click.addEventListener('touchend', function(e) {
+click.addEventListener('click', function(e) {
     log.focus();
+    console.log("mobileworks?");
 }); 
 
 clear.onclick = function () {
