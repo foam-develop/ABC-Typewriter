@@ -43,6 +43,11 @@ click.onclick = function () {
     click.style.display = "none";
 }; 
 
+// For mobile
+click.addEventListener('touchend', function(e) {
+    log.focus();
+}); 
+
 clear.onclick = function () {
     logContainer.innerHTML = "";
     log.innerHTML = "";  
@@ -96,3 +101,5 @@ function logKey(e) {
         log.innerHTML = string.join('');
     }
 }
+
+
