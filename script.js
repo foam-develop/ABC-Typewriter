@@ -1,6 +1,7 @@
 const log = document.getElementById('log');
 const click = document.getElementById('clickhere');
 const container = document.getElementById('container');
+const input = document.getElementById('input');
 const clear = document.getElementById('clear');
 const logContainer = document.getElementById('log-container');
 var string = [];
@@ -43,11 +44,9 @@ click.onclick = function () {
     click.style.display = "none";
 }; 
 
-// For mobile
-click.addEventListener('click', function(e) {
-    document.focus();
-    console.log("mobileworks?");
-}); 
+input.onclick = function () { 
+    input.innerHTML = "";
+}; 
 
 clear.onclick = function () {
     logContainer.innerHTML = "";
@@ -85,8 +84,10 @@ function logKey(e) {
     click.style.display = "none";
     if (keyTyped) {
         if (e.key === "Backspace") {
-            string.pop();
-            logContainer.removeChild(logContainer.lastElementChild);
+            if (string.length > 0) {
+                string.pop();
+                logContainer.removeChild(logContainer.lastElementChild);
+            }
         } else if (e.key === " ") {
             addSpace(e.key, logContainer);
             string.push(e.key);
@@ -99,7 +100,7 @@ function logKey(e) {
             console.log(string);
             string.push(e.key);
         }
-        log.innerHTML = string.join('');
+        // log.innerHTML = string.join('');
     }
 }
 

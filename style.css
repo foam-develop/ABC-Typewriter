@@ -27,6 +27,10 @@ body {
     font-family: MonumentGrotesk;
     font-size: 36px;
     padding: 12px;
+    height: 100vh;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
 }
 
 .italic {
@@ -59,9 +63,27 @@ h1 {
     justify-content: space-around;
     align-items:flex-start;
 }
+#log-container {
+    height: 100%;   
+}
 
 #log {
     margin-top: 12px;
+}
+
+#input:hover {
+    cursor: crosshair;
+}
+
+#input {
+    font-family: MonumentGrotesk;
+    font-size: 36px;
+    border: 0;
+    /* outline: none; */
+    resize: none;
+    width: 90vw;
+    margin-bottom: 50px;
+    box-sizing: border-box;
 }
 
 #clickhere {
@@ -92,8 +114,7 @@ h1 {
 }
 
 footer {
-    width: 100vw;
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     padding: 10px;
@@ -102,4 +123,5 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    box-sizing: border-box;
 }
