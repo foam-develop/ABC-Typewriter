@@ -84,6 +84,7 @@ h1 {
     width: 90vw;
     margin-bottom: 50px;
     box-sizing: border-box;
+    text-transform: lowercase;
 }
 
 #clickhere {

@@ -51,6 +51,7 @@ input.onclick = function () {
 clear.onclick = function () {
     logContainer.innerHTML = "";
     log.innerHTML = "";  
+    input.innerHTML = "";
     string = [];
     click.style.display = "none";
 }
