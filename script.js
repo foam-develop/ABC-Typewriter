@@ -4,10 +4,11 @@ const container = document.getElementById('container');
 const input = document.getElementById('input');
 const clear = document.getElementById('clear');
 const logContainer = document.getElementById('log-container');
-var string = [];
 document.addEventListener('keydown', logKey);
+var string = [];
 var keyTyped = false;
-const alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", " ", "Backspace", "Enter"];
+const alphabet = ["a", "A", "b", "B", "c", "C", "d", "D", "e", "E", "", "f", "F", "g", "G", "h", "H", "i", "I", "j", "J", "k", "K", "l", "L", "m", "M", "n", "N", "o", "O", "p", "P", "q", "Q", "r", "R", "s", "S", "t", "T", "u", "U", "v", "V", "w", "W", "x", "X", "y", "Y", "z", "Z", " "];
+const specialChars = ["Backspace", "Enter"];
 
 var i = 0;
 var txt = 'you can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message. no numbers or special characters.';
@@ -58,8 +59,11 @@ clear.onclick = function () {
 
 function checkIfLetter(key) {
     if (alphabet.includes(key)) {
+        // key = key.toLowerCase();
         keyTyped = true;
         console.log(key + keyTyped);
+    } else if (specialChars.includes(key)) {
+        keyTyped = true;
     } else {
         keyTyped = false;
         console.log(key + keyTyped);
