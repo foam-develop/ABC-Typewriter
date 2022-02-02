@@ -17,14 +17,13 @@
             </nav>
             <p class="clear" id="clear">Clear typewriter</p>
         </div>
-        <p id="key"></p>
+        <p id="key">you can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message. no numbers or special characters.</p>
     </header>
-    <p id="clickhere">Click or type to start...</p>
     <section id="container">
         <div id="log-container"></div>
         <p id="log"></p>
-        <textarea class="input" id="input" name="input" id="" cols="30" rows="5">Click here to start</textarea>
     </section>
+    <textarea class="input" id="input" name="input" id="" cols="30" rows="2" placeholder="Click here to start" onkeyup="restrict(this)"></textarea>
     <footer>
         <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit Next Level: Jonathas de Andrade <span class="italic">Staging Resistance</span> at Foam Amsterdam</a><br>All photographs by Jonathas de Andrade</p>
         <p>&#169; Jonathas de Andrade | Foam Amsterdam</p>

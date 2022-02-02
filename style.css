@@ -27,7 +27,8 @@ body {
     font-family: MonumentGrotesk;
     font-size: 36px;
     padding: 12px;
-    height: 100vh;
+    min-height: 100vh;
+    position: relative;
     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
@@ -81,21 +82,25 @@ h1 {
     border: 0;
     /* outline: none; */
     resize: none;
-    width: 90vw;
+    width: 100%;
     margin-bottom: 50px;
     box-sizing: border-box;
     text-transform: lowercase;
 }
 
+#input::placeholder {
+    color: #000;
+    text-align: center;
+}
+
+#input:focus::placeholder {
+    color: transparent;
+}
 #clickhere {
     position: fixed;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-}
-
-#clickhere, #clear {
-    display: none;
 }
 
 #clear:hover {
@@ -116,6 +121,7 @@ h1 {
 
 footer {
     /* position: fixed; */
+    width: 100vw;
     left: 0;
     bottom: 0;
     padding: 10px;
