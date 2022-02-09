@@ -8,26 +8,31 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div id="top-header">
-            <h1 id="title"></h1>
-            <nav>
-                <p>About</p>
-                <p>Instructions</p>
-            </nav>
-            <p class="clear" id="clear">Clear typewriter</p>
-        </div>
-        <p id="key">you can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message. no numbers or special characters.</p>
-    </header>
-    <section id="container">
-        <div id="log-container"></div>
-        <p id="log"></p>
+    <section class="site-wrapper">
+        <header>
+            <div id="top-header">
+                <div id="left-header">
+                    <h1 id="title"></h1>
+                    <nav>
+                        <p class="nav-item" id="about" onclick="toggle('about')">About</p>
+                        <p class="nav-item" id="key" onclick="toggle('key')">Instructions</p>
+                        <p class="clear nav-item" id="clear">Clear typewriter</p>
+                    </nav>
+                </div>
+                <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982). ABC da Cana is a photo essay which shows workers from the TABU refinery performing the letters of the alphabet using sugar cane, during their break from working in the fields. The project was inspired by Luís Jardim's drawings for the graphic design of the Brasil Açucareiro magazine, from 1957.</p>
+                <p class="nav-txt" id="key-txt">you can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message. no numbers or special characters.</p>
+            </div>
+        </header>
+        <section id="content">
+            <div id="log-container"></div>
+            <p id="log"></p>
+            <textarea class="input" id="input" name="input" id="" cols="30" rows="2" placeholder="Click here to start" onkeyup="restrict(this)"></textarea>
+        </section>
+        <footer>
+            <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit Next Level: Jonathas de Andrade <span class="italic">Staging Resistance</span> at Foam Amsterdam</a><br>All photographs by Jonathas de Andrade</p>
+            <p>&#169; Jonathas de Andrade | Foam Amsterdam</p>
+        </footer>
     </section>
-    <textarea class="input" id="input" name="input" id="" cols="30" rows="2" placeholder="Click here to start" onkeyup="restrict(this)"></textarea>
-    <footer>
-        <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit Next Level: Jonathas de Andrade <span class="italic">Staging Resistance</span> at Foam Amsterdam</a><br>All photographs by Jonathas de Andrade</p>
-        <p>&#169; Jonathas de Andrade | Foam Amsterdam</p>
-    </footer>
     <script src="script.js"></script>
 </body>
 </html>

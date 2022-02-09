@@ -1,7 +1,12 @@
 const log = document.getElementById('log');
-const container = document.getElementById('container');
+const content = document.getElementById('content');
 const input = document.getElementById('input');
+const about = document.getElementById('about');
+const key = document.getElementById('key');
 const clear = document.getElementById('clear');
+const aboutTxt = document.getElementById('about-txt');
+const keyTxt = document.getElementById('key-txt');
+const navTxts = document.querySelectorAll('.nav-txt');
 const logContainer = document.getElementById('log-container');
 input.addEventListener("input", updateValue);
 var backspace = false;
@@ -45,9 +50,22 @@ clear.onclick = function () {
     string = [];
 }
 
+
+function toggle(id) {
+    navTxts.forEach(navtxt => navtxt.style.display = "none");
+    document.getElementById(id + "-txt").style.display = "block";
+}
+// about.onclick = function () {
+//     aboutTxt.style.display = "block";
+// }
+
+// key.onclick = function () {
+//     keyTxt.style.display = "block";
+// }
+
 function addImage(i, container) {
     const image = document.createElement("img");
-    image.setAttribute("src", i + ".png");
+    image.setAttribute("src", "img/" + i + ".jpg");
     image.setAttribute("class", "img");
     container.appendChild(image);
     return image;

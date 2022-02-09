@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 a {
     text-decoration: none;
     color: #000;
@@ -13,6 +17,7 @@ a:hover {
     color: red;
     cursor: crosshair;
 }
+
 @font-face {
     font-family: MonumentGrotesk;
     src: url(MonumentGrotesk-Regular.otf);
@@ -24,19 +29,24 @@ a:hover {
 }
 
 body {
+    height: 100%;
     font-family: MonumentGrotesk;
     font-size: 36px;
-    padding: 12px;
-    min-height: 100vh;
     position: relative;
-    /* display: flex;
+}
+
+.site-wrapper {
+    min-height: 100%;
+    padding: 12px;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .italic {
     font-family: MonumentGrotesk-Italic;
 }
+
 #top-header {
     display: flex;
     flex-direction: row;
@@ -50,20 +60,32 @@ h1 {
     margin-bottom: 10px;
 }
 
-#key {
-    font-family: MonumentGrotesk;
+.nav-item {
     font-size: 16px;
-    width: 30%;
 }
 
-#container {
-    /* display: flex; */
-    width: 100vw;
-    padding: 100px 0;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items:flex-start;
+
+#about:visited, #key:visited, #clear:visited {
+    color: red;
 }
+
+#about:hover, #key:hover, #clear:hover {
+    color: red;
+    cursor: crosshair;
+}
+
+#key-txt, #about-txt {
+    display: none;
+    font-family: MonumentGrotesk;
+    font-size: 16px;
+    width: 40%;
+}
+
+#content {
+    width: 100%;
+    padding: 60px 0;
+}
+
 #log-container {
     height: 100%;   
 }
@@ -96,6 +118,7 @@ h1 {
 #input:focus::placeholder {
     color: transparent;
 }
+
 #clickhere {
     position: fixed;
     left: 50%;
@@ -103,32 +126,21 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
-#clear:hover {
-    color: red;
-    cursor: crosshair;
-}
-
-#cursor {
-    font-size: 36px;
-    display: inline;
-}
-
 .space {
     display: inline-block;
     width: 50px;
-    height: 106px;
+    height: 100px;
 }
 
+img {
+    height: 100px;
+}
 footer {
-    /* position: fixed; */
-    width: 100vw;
-    left: 0;
-    bottom: 0;
-    padding: 10px;
+    width: 100%;
+    height: 40px;
     font-size: 16px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    box-sizing: border-box;
 }
