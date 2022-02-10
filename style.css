@@ -52,6 +52,7 @@ body {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    height: 200px;
 }
 
 h1 {
@@ -62,19 +63,20 @@ h1 {
 
 .nav-item {
     font-size: 16px;
+    display: block;
 }
 
 
-#about:visited, #key:visited, #clear:visited {
+#about:focus, #key:focus {
     color: red;
 }
 
-#about:hover, #key:hover, #clear:hover {
+.nav-item:hover {
     color: red;
     cursor: crosshair;
 }
 
-#key-txt, #about-txt {
+.nav-txt {
     display: none;
     font-family: MonumentGrotesk;
     font-size: 16px;
