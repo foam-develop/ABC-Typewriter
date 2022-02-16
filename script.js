@@ -79,8 +79,13 @@ clear.onclick = function () {
 }
 
 function toggle(id) {
-    navTxts.forEach(navtxt => navtxt.style.display = "none");
-    document.getElementById(id + "-txt").style.display = "block";
+    let el = document.getElementById(id + "-txt");
+    navTxts.forEach(navtxt => { 
+        navtxt.style.display = "none"
+        navtxt.classList.remove("visible");
+    });
+    el.style.display = "block";
+    el.classList.add("visible");
 }
 
 function addImage(i, container) {
@@ -135,6 +140,10 @@ function updateValue(e) {
 function restrict(x) {
     x.value = x.value.replace(/[^a-z\s]/i, "");
     console.log("restrict works");
+}
+
+function hideNavTxts() {
+    document.querySelector(".visible").style.display = "none";
 }
 
 function hover(input) {
