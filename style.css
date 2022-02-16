@@ -55,8 +55,16 @@ body {
     height: 200px;
 }
 
+#left-header {
+    width: 50%;
+}
+
+nav {
+    font-size: 16px;
+}
+
 h1 {
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: 400;
     margin-bottom: 0.3em;
 }
@@ -65,7 +73,6 @@ h1 {
     font-size: 1em;
     display: block;
 }
-
 
 #about:focus, #key:focus {
     color: red;
@@ -80,7 +87,7 @@ h1 {
     display: none;
     font-family: MonumentGrotesk;
     font-size: 1em;
-    width: 60%;
+    width: 50%;
 }
 
 #content {
