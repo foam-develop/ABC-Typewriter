@@ -14,23 +14,25 @@
                 <div id="left-header">
                     <a href="index.html"><h1 id="title"></h1></a>
                     <nav>
-                        <a href="#" class="nav-item" id="about" onclick="toggle('about')">About</a>
-                        <a href="#" class="nav-item" id="key" onclick="toggle('key')">Instructions</a>
-                        <a href="#" class="clear nav-item" id="clear">Clear typewriter</a>
+                        <a href="#" class="nav-item" id="about" onclick="toggleNavTxt('about')">About</a>
+                        <a href="#" class="nav-item" id="key" onclick="toggleNavTxt('key')">Instructions</a>
                     </nav>
                 </div>
-                <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982).<br>ABC da Cana, 2014 is a photo essay which shows workers from the TABU refinery performing the letters of the alphabet using sugar cane, during their break from working in the fields. The project was inspired by Luís Jardim's drawings for the graphic design of the Brasil Açucareiro magazine, from 1957.</p>
-                <p class="nav-txt" id="key-txt">You can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message.<br><br>No numbers or special characters.<br><br>Hover over each image to learn more about ABC da Cana, the artist and the exhibition.</p>
+                <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982).</p>
+                <p class="nav-txt" id="key-txt">You can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message.<br>No numbers or special characters.<br>Use 'Clear typewriter' to start <br>Hover over each image to learn more about ABC da Cana, the artist and the exhibition.</p>
                 <p class="nav-txt" id="img-txt"></p>
             </div>
         </header>
         <section id="content">
             <div id="log-container"></div>
-            <p id="log"></p>
-            <textarea class="input" id="input" name="input" id="" cols="30" rows="2" placeholder="Click here to start" onclick="hideNavTxts()" onkeyup="restrict(this)"></textarea>
+            <div id="txt-container">
+                <textarea class="input" id="input" name="input" id="" cols="30" rows="4" placeholder="Click here to start" onclick="hideNavTxts()" onkeyup="restrict(this)"></textarea>
+                <a href="#" class="txt-link" id="clear" onclick="clearTypewriter()">Clear typewriter</a>
+                <a href="#" class="txt-link" id="change-font" onclick="toggleFont()">Change font to black and white</a>
+            </div>
         </section>
         <footer>
-            <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit Next Level: Jonathas de Andrade <span class="italic">Staging Resistance</span> at Foam Amsterdam</a><br>All photographs by Jonathas de Andrade</p>
+            <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit Next Level: Jonathas de Andrade <span class="italic">Staging Resistance</span> at Foam Amsterdam</a></p>
             <p>&#169; Jonathas de Andrade | Foam Amsterdam</p>
         </footer>
     </section>

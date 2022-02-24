@@ -12,6 +12,8 @@ html {
 a {
     text-decoration: none;
     color: #000;
+    font-size: 1em;
+    display: block;
 }
 
 a:hover {
@@ -69,11 +71,6 @@ h1 {
     margin-bottom: 0.3em;
 }
 
-.nav-item {
-    font-size: 1em;
-    display: block;
-}
-
 #about:focus, #key:focus {
     color: red;
 }
@@ -95,8 +92,8 @@ h1 {
     padding: 2em 0;
 }
 
-#log {
-    margin-top: 0.8em;
+#txt-container {
+    margin-bottom: 3em;
 }
 
 #input:hover {
@@ -106,17 +103,18 @@ h1 {
 #input {
     font-family: MonumentGrotesk;
     font-size: 2em;
-    border: 0;
-    /* outline: none; */
+    /* border: 0; */
+    outline-color: #000; 
     resize: none;
     width: 100%;
-    margin-bottom: 3em;
     text-transform: lowercase;
+    margin: 0.3em 0;
 }
 
 #input::placeholder {
     color: #000;
-    text-align: center;
+    /* text-align: center; */
+    padding: 0.3em;
 }
 
 #input:focus::placeholder {
@@ -134,6 +132,10 @@ h1 {
     display: inline-block;
     width: 3em;
     height: 6em;
+}
+
+.txt-link {
+    /* display: inline-block; */
 }
 
 img {
