@@ -15,32 +15,32 @@ let bwFont = false;
 const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "Backspace", "Enter", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 const imgTxts = {
-    a: "ABC da Cana, 2014 is a photo essay which shows workers from the TABU refinery performing the letters of the alphabet using sugarcane, during their break from working in the fields.",
+    a: "<span class='italic'>ABC da Cana</span> (2014) is a photo essay which shows workers from the TABU refinery performing the letters of the alphabet using sugarcane, during their break from working in the fields.",
     b: "Blue work costumes contrast with the brown-beige background of the sugarcane fields, making the men stand out clearly from the background.",
-    c: "Composition: Each photo shows the labourers in the center, bending and stretching themselves to manipulate the sugarcane into shape.",
+    c: "Composition: Each photo shows the labourers in the centre, bending and stretching themselves to manipulate the sugarcane into shape.",
     d: "De Andrade typically stages social experiments on locations where power dynamics are at play. For the works in this series, he collaborated with labourers from a sugar refinery.",
     e: "Experience Jonathas de Andrade's artistic practice yourself in our free Walk-in Workshop, every Sunday between 14:00 - 16:00.",
-    f: "Foam Amsterdam is currently exhibiting Next Level: Jonathas de Andrade <span class='italic'>Staging Resistance</span>.",
+    f: "Foam Amsterdam is currently exhibiting Next Level: Jonathas de Andrade - <span class='italic'>Staging Resistance</span>.",
     g: "Global production of sugarcane is estimated at almost 2 billion tonnes a year, with Brazil taking up almost 40% of this production.",
     h: "How do you think the material feels? Have you ever touched raw sugarcane?",
-    i: "Inspiration for the ABC da Cana came from the 1957 typography of Luís Jardim for Brasil Açucareiro, a trade magazine published by the Brazilian Institute for Alcohol and Sugar.",
+    i: "Inspiration for the ABC da Cana came from the 1957 typography of Luís Jardim for <span class='italic'>Brasil Açucareiro</span>, a trade magazine published by the Brazilian Institute for Alcohol and Sugar.",
     j: "Jonathas de Andrade is a Brazilian artist who addresses issues of social, economic and racial inequality that are – and have historically been – at the core of Brazilian politics.",
     k: "Knowing this is made during a lunch break, can you see this reflected in the photo? And how (not)?",
     l: "Language plays an important role in Jonathas de Andrade's work. By combining visual with text, he creates a unique type of visual storytelling.",
     m: "Make your own photo alphabet: pick a type of food that you like or perhaps have at home. Think carefully about the composition, colour and background. How can you make your letters stand out? Share using #foamabc.",
-    n: "Next Level is an exhibition series that introduces artists who are making radical use of photography. Jonathas de Andrade is the current Next Level artist on display in Foam Photography Museum Amsterdam.",
+    n: "Next Level is an exhibition series that introduces artists who are making radical use of photography. Jonathas de Andrade is the current Next Level artist on display in Foam, photography museum Amsterdam.",
     o: "Once sugarcane is harvested, a process called 'milling' extracts the juice, concentrates the juice into syrup and then crystallizes the syrup into sugar.",
-    p: "Pay attention to the background of the photo you typed before and after this one. What is similar or different? What is the effect of this in your 'photoword?",
-    q: "Questioning colonial power structures is central to Jonathas de Andrade's practice. This can also be seen in his other work, 'Hunger of Resistance' and 'Tejucupapo Heroins', also on display at Foam.",
+    p: "Pay attention to the background of the photo you typed before and after this one. What is similar or different? What is the effect of this in your 'photoword’?",
+    q: "Questioning colonial power structures is central to Jonathas de Andrade's practice. This can also be seen in his other work, <span class='italic'>Hunger for Resistance</span> and <span class='italic'>Tejucupapo Heroins</span>, also on display at Foam.",
     r: "Raw materials, like sugar, were traded against manufactured goods and enslaved people, thus forming the colonial 'triangle trade'.",
     s: "Sugarcane is the raw material for refined sugar. It has been an important Brazilian export product since colonial times, and has a dark history of slavery, land reclamation through logging and unequal distribution of natural resources.",
     t: "The performance of the letters of the alphabet can also be seen as a commentary on the level of illiteracy in rural Brazil.",
     u: "Underneath the playful act of performing letters lies a gesture of empowerment and light-hearted disobedience.",
-    v: "Visit Next Level: Jonathas de Andrade <span class='italic'>Staging Resistance</span> at Foam Photography Museum Amsterdam (Keizersgracht 609, Amsterdam).",
-    w: "Why do you think the artist works with local communities, such as the workers of the sugarcane refinery? How does that impact the photo?",
+    v: "Visit Next Level: Jonathas de Andrade - <span class='italic'>Staging Resistance</span> at Foam, photography museum Amsterdam (Keizersgracht 609, Amsterdam).",
+    w: "Why do you think the artist works with local communities, such as the workers of the sugar refinery? How does that impact the photo?",
     x: "X-ray your body: how much sugar have you consumed today? Can you find out where this came from?",
     y: "‘You are what you eat’ is a common saying. But how much do we actually know about the social, economic and environmental conditions in which our food is produced?",
-    z: "Zoom in to view the photographs better!",
+    z: "Zoom in to view the photographs better, or view from up close in the exhibition at Foam!"   
 }
 // var i = 0;
 // var txt = 'you can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message. no numbers or special characters.';
