@@ -16,7 +16,7 @@ const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m
 
 const imgTxts = {
     a: "ABC da Cana, 2014 is a photo essay which shows workers from the TABU refinery performing the letters of the alphabet using sugarcane, during their break from working in the fields.",
-    b: "Blue work costumes constrast with the brown-beige background of the sugarcane fields, making the men stand out clearly from the background.",
+    b: "Blue work costumes contrast with the brown-beige background of the sugarcane fields, making the men stand out clearly from the background.",
     c: "Composition: Each photo shows the labourers in the center, bending and stretching themselves to manipulate the sugarcane into shape.",
     d: "De Andrade typically stages social experiments on locations where power dynamics are at play. For the works in this series, he collaborated with labourers from a sugar refinery.",
     e: "Experience Jonathas de Andrade's artistic practice yourself in our free Walk-in Workshop, every Sunday between 14:00 - 16:00.",
@@ -27,11 +27,11 @@ const imgTxts = {
     j: "Jonathas de Andrade is a Brazilian artist who addresses issues of social, economic and racial inequality that are – and have historically been – at the core of Brazilian politics.",
     k: "Knowing this is made during a lunch break, can you see this reflected in the photo? And how (not)?",
     l: "Language plays an important role in Jonathas de Andrade's work. By combining visual with text, he creates a unique type of visual storytelling.",
-    m: "Make your own photo alphabet: pick a type of food that you like or perhaps have at home. Think carefully about the composition, colour and background. How can you make your letters stand out? Share with #foamabc",
-    n: "Next Level is an exhibition series that introduces artists who are making radical use of photography. Jonathas de Andrade is the current Next Level artist on display in Foam Photography Museum Amsterdam",
+    m: "Make your own photo alphabet: pick a type of food that you like or perhaps have at home. Think carefully about the composition, colour and background. How can you make your letters stand out? Share using #foamabc.",
+    n: "Next Level is an exhibition series that introduces artists who are making radical use of photography. Jonathas de Andrade is the current Next Level artist on display in Foam Photography Museum Amsterdam.",
     o: "Once sugarcane is harvested, a process called 'milling' extracts the juice, concentrates the juice into syrup and then crystallizes the syrup into sugar.",
     p: "Pay attention to the background of the photo you typed before and after this one. What is similar or different? What is the effect of this in your 'photoword?",
-    q: "Questioning colonial power structures is central to Jonathas de Andrade's practice. This can also be seen in his other work, 'Hunger of Resistance' and 'Tejucupapo Heroins'",
+    q: "Questioning colonial power structures is central to Jonathas de Andrade's practice. This can also be seen in his other work, 'Hunger of Resistance' and 'Tejucupapo Heroins', also on display at Foam.",
     r: "Raw materials, like sugar, were traded against manufactured goods and enslaved people, thus forming the colonial 'triangle trade'.",
     s: "Sugarcane is the raw material for refined sugar. It has been an important Brazilian export product since colonial times, and has a dark history of slavery, land reclamation through logging and unequal distribution of natural resources.",
     t: "The performance of the letters of the alphabet can also be seen as a commentary on the level of illiteracy in rural Brazil.",
@@ -78,16 +78,16 @@ function clearTypewriter() {
     string = [];
 }
 
-function toggleFont() {
-    if (bwFont === false) {
-        bwFont = true;
-        changeFont.innerHTML = "Change font to photo"
-    } else {
-        bwFont = false;
-        changeFont.innerHTML = "Change font to black and white"
-    }
-    changeImg();
-}
+// function toggleFont() {
+//     if (bwFont === false) {
+//         bwFont = true;
+//         changeFont.innerHTML = "Change font to photo"
+//     } else {
+//         bwFont = false;
+//         changeFont.innerHTML = "Change font to black and white"
+//     }
+//     changeImg();
+// }
 
 function toggleNavTxt(id) {
     let el = document.getElementById(id + "-txt");
@@ -102,11 +102,7 @@ function toggleNavTxt(id) {
 function addImage(i, container) {
     const image = document.createElement("img");
     image.setAttribute("class", "img " + i);
-    if (bwFont) {
-        image.setAttribute("src", "img-bw/" + i + "-bw.png");
-    } else {
-        image.setAttribute("src", "img/" + i + ".jpg");
-    }
+    image.setAttribute("src", "img-bw/" + i + "-bw.png");
     container.appendChild(image);
     return image;
 }
@@ -167,8 +163,10 @@ function hover(input) {
         toggleNavTxt("img");
         var txt = imgTxts[input];
         document.getElementById("img-txt").innerHTML = txt;
+        image.setAttribute("src", "img/" + input + ".jpg");
     }));
     document.querySelectorAll("." + input).forEach(image => image.addEventListener("mouseout", function() {
         document.getElementById("img-txt").innerHTML = "";
+        image.setAttribute("src", "img-bw/" + input + "-bw.png");
     }));
 }
