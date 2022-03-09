@@ -151,7 +151,7 @@ function hideNavTxts() {
 function hover(key) {
     console.log(key);
     let input = key.toLowerCase();
-    console.log("after lowecase is: " + input);
+    console.log("after lowercase is: " + input);
     document.querySelectorAll("." + input).forEach(image => image.addEventListener("mouseover", function() {
         toggleNavTxt("img");
         var txt = imgTxts[input];
