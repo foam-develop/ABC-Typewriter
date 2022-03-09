@@ -116,9 +116,10 @@ input.addEventListener("keydown", function(e) {
 });
 
 function updateValue(e) {
-    console.log("data is " + e.data);
+    console.log("data is " + e.target.value);
     if (keyTyped) {
-        var string = e.target.value.split("");
+        let lowerCaseKey = e.target.value.toLowerCase();
+        var string = lowerCaseKey.split("");
         if (string.length >= 0) {
             var lastKey = string[string.length-1];
             if (backspace) {
