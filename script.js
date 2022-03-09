@@ -151,6 +151,7 @@ function hideNavTxts() {
 
 function hover(input) {
     // console.log(key);
+    console.log("input not to lowercase");
     // let input = key.toLowerCase();
     console.log("after lowercase is: " + input);
     document.querySelectorAll("." + input).forEach(image => image.addEventListener("mouseover", function() {
