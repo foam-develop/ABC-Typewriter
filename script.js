@@ -116,6 +116,7 @@ input.addEventListener("keydown", function(e) {
 });
 
 function updateValue(e) {
+    console.log("data is " + e.data);
     if (keyTyped) {
         var string = e.target.value.split("");
         if (string.length >= 0) {

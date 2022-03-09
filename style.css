@@ -124,7 +124,7 @@ h1 {
     outline-color: #000; 
     resize: none;
     width: 100%;
-    text-transform: lowercase !important;
+    text-transform: lowercase;
     margin: 0.3em 0;
 }
 
