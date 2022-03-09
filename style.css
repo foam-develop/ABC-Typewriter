@@ -17,7 +17,7 @@ a {
 }
 
 a:hover {
-    color: red;
+    color: #e30613;
     cursor: crosshair;
 }
 
@@ -49,7 +49,7 @@ body {
     font-family: MonumentGrotesk-Italic;
 }
 
-#top-header {
+header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -72,11 +72,11 @@ h1 {
 }
 
 #about:focus, #key:focus {
-    color: red;
+    color: #e30613;
 }
 
 .nav-item:hover {
-    color: red;
+    color: #e30613;
     cursor: crosshair;
 }
 
@@ -87,11 +87,27 @@ h1 {
     width: 50%;
 }
 
+#key-txt {
+    display: block;
+}
+
+#img-txt {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50%;
+    padding: 0.8em;
+    color: #e30613;
+}
+
 #content {
     width: 100%;
     padding: 2em 0;
 }
 
+#log-container {
+    min-height: 96px;
+}
 #txt-container {
     margin-bottom: 3em;
 }
@@ -128,14 +144,14 @@ h1 {
     transform: translate(-50%, -50%);
 }
 
+#clear {
+    font-size: 1.5em;
+}
+
 .space {
     display: inline-block;
     width: 3em;
     height: 6em;
-}
-
-.txt-link {
-    /* display: inline-block; */
 }
 
 img {

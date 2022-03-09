@@ -10,25 +10,22 @@
 <body>
     <section class="site-wrapper">
         <header>
-            <div id="top-header">
-                <div id="left-header">
-                    <a href="index.html"><h1 id="title"></h1></a>
-                    <nav>
-                        <a href="#" class="nav-item" id="about" onclick="toggleNavTxt('about')">About</a>
-                        <a href="#" class="nav-item" id="key" onclick="toggleNavTxt('key')">Instructions</a>
-                    </nav>
-                </div>
-                <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982).</p>
-                <p class="nav-txt" id="key-txt">You can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message.<br>No numbers or special characters.<br>Use 'Clear typewriter' to start again. <br>Hover over each image to learn more about ABC da Cana, the artist and the exhibition.</p>
-                <p class="nav-txt" id="img-txt"></p>
+            <div id="left-header">
+                <a href="index.html"><h1 id="title"></h1></a>
+                <nav>
+                    <a href="#" class="nav-item" id="about" onclick="toggleNavTxt('about')">About</a>
+                    <a href="#" class="nav-item" id="key" onclick="toggleNavTxt('key')">Instructions</a>
+                </nav>
             </div>
+            <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982).</p>
+            <p class="nav-txt" id="key-txt">Use lowercase a-z, space, backspace and enter keys to type your message.<br>No numbers, special characters or autocorrect.<br>Click 'Start again' for a clean slate.<br>Hover over each image to learn more about <span class="italic">ABC da Cana</span> (2014), the artist and the exhibition at Foam photography museum Amsterdam.</p>
+            <p class="nav-txt" id="img-txt"></p>
         </header>
         <section id="content">
             <div id="log-container"></div>
             <div id="txt-container">
                 <textarea class="input" id="input" name="input" id="" cols="30" rows="4" placeholder="Click here to start" onclick="hideNavTxts()" onkeyup="restrict(this)"></textarea>
-                <a href="#" class="txt-link" id="clear" onclick="clearTypewriter()">Clear typewriter</a>
-                <a href="#" class="txt-link" id="change-font" onclick="toggleFont()">Change font to black and white</a>
+                <a href="#" class="txt-link" id="clear" onclick="clearTypewriter()">Start again</a>
             </div>
         </section>
         <footer>
