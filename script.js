@@ -102,7 +102,7 @@ function toggleNavTxt(id) {
 function addImage(i, container) {
     const image = document.createElement("img");
     image.setAttribute("class", "img " + i);
-    image.setAttribute("src", "img-bw/" + i + "-bw.png");
+    image.setAttribute("src", "img-bw/" + i + "_bw.jpg");
     container.appendChild(image);
     return image;
 }
@@ -167,6 +167,6 @@ function hover(input) {
     }));
     document.querySelectorAll("." + input).forEach(image => image.addEventListener("mouseout", function() {
         document.getElementById("img-txt").innerHTML = "";
-        image.setAttribute("src", "img-bw/" + input + "-bw.png");
+        image.setAttribute("src", "img-bw/" + input + "_bw.jpg");
     }));
 }
