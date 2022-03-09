@@ -78,17 +78,6 @@ function clearTypewriter() {
     string = [];
 }
 
-// function toggleFont() {
-//     if (bwFont === false) {
-//         bwFont = true;
-//         changeFont.innerHTML = "Change font to photo"
-//     } else {
-//         bwFont = false;
-//         changeFont.innerHTML = "Change font to black and white"
-//     }
-//     changeImg();
-// }
-
 function toggleNavTxt(id) {
     let el = document.getElementById(id + "-txt");
     navTxts.forEach(navtxt => { 
@@ -158,7 +147,9 @@ function hideNavTxts() {
     }
 }
 
-function hover(input) {
+function hover(key) {
+    console.log(key);
+    let input = key.toLowerCase();
     document.querySelectorAll("." + input).forEach(image => image.addEventListener("mouseover", function() {
         toggleNavTxt("img");
         var txt = imgTxts[input];
