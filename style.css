@@ -124,7 +124,7 @@ h1 {
     outline-color: #000; 
     resize: none;
     width: 100%;
-    text-transform: lowercase;
+    text-transform: lowercase !important;
     margin: 0.3em 0;
 }
 
@@ -149,10 +149,6 @@ h1 {
     display: inline-block;
     width: 3em;
     height: 6em;
-}
-
-.txt-link {
-    /* display: inline-block; */
 }
 
 img {
