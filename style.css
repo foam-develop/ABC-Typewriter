@@ -106,8 +106,9 @@ h1 {
 }
 
 #log-container {
-    min-height: 96px;
+    min-height: 72px;
 }
+
 #txt-container {
     margin-bottom: 3em;
 }
@@ -175,6 +176,10 @@ footer {
     #content {
         padding: 3em 0;
     }
+
+    #log-container {
+        min-height: 96px;
+    }
 }
 
 @media only screen and (min-width: 768px) {
@@ -188,5 +193,9 @@ footer {
 
     .nav-txt {
         width: 40%;
+    }
+
+    #log-container {
+        min-height: 96px;
     }
   }
