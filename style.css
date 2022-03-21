@@ -9,16 +9,21 @@ html {
     font-size: 12px;
 }
 
-a {
+a, button {
     text-decoration: none;
     color: #000;
     font-size: 1em;
     display: block;
 }
 
-a:hover {
+a:hover, button:hover {
     color: #e30613;
     cursor: crosshair;
+}
+
+button {
+    border: none;
+    background-color: transparent;
 }
 
 @font-face {

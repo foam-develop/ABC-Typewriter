@@ -9,10 +9,7 @@ const keyTxt = document.getElementById('key-txt');
 const navTxts = document.querySelectorAll('.nav-txt');
 const logContainer = document.getElementById('log-container');
 input.addEventListener("input", updateValue);
-var backspace = false;
-var keyTyped = false;
-let bwFont = false;
-const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", " ", "Backspace", "Enter", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+const regex = new RegExp('[^a-z|s|\n|\b| ]', 'gmi'); // match everything but a-z, whitespace, backspace
 
 const imgTxts = {
     a: "<span class='italic'>ABC da Cana</span> (2014) is a photo essay which shows workers from the TABU refinery performing the letters of the alphabet using sugarcane, during their break from working in the fields.",
@@ -42,25 +39,10 @@ const imgTxts = {
     y: "‘You are what you eat’ is a common saying. But how much do we actually know about the social, economic and environmental conditions in which our food is produced?",
     z: "Zoom in to view the photographs better, or view from up close in the exhibition at Foam!"   
 }
-// var i = 0;
-// var txt = 'you can use lowercase a-z, SPACE, BACKSPACE and ENTER keys to type your message. no numbers or special characters.';
-// var speed = 50;
 
-// function typeWriter() {
-//     if (i < txt.length) {
-//       document.getElementById("key").innerHTML += txt.charAt(i);
-//       i++;
-//       setTimeout(typeWriter, speed);
-//     } else {
-//         clear.style.display = "block";
-//     }
-//   }
-
-// setTimeout(typeWriter, 1650);
-
-var j = 0;
-var title = 'ABC da Cana Typewriter';
-var speedTitle = 75;
+let j = 0;
+const title = 'ABC da Cana Typewriter';
+const speedTitle = 75;
 
 function typeWriterTitle() {
     if (j < title.length) {
@@ -88,55 +70,52 @@ function toggleNavTxt(id) {
     el.classList.add("visible");
 }
 
-function addImage(i, container) {
+function addImage(i, cursorLocation) {
     const image = document.createElement("img");
     image.setAttribute("class", "img " + i);
     image.setAttribute("src", "img-bw/" + i + "_bw.jpg");
-    container.appendChild(image);
-    return image;
+    logContainer.insertBefore(image, logContainer.children[cursorLocation -1]);
 }
 
-function addSpace(s, container) {
+function addSpace(cursorLocation) {
     const space = document.createElement("div");
     space.setAttribute("class", "space");
-    container.appendChild(space);
+    logContainer.insertBefore(space, logContainer.children[cursorLocation -1]);
+
 }
 
-input.addEventListener("keydown", function(e) {
-    if (alphabet.includes(e.key)) {
-        keyTyped = true;
-        if (e.key === "Backspace") {
-            backspace = true;
-        } else {
-            backspace = false;
-        }
-    } else {
-        keyTyped = false;
-    }
-});
+function addBreak(cursorLocation) {
+    const enter = document.createElement("br");
+    logContainer.insertBefore(enter, logContainer.children[cursorLocation -1]);
+}
+
+function removeCharacter(cursorLocation) {
+    logContainer.removeChild(logContainer.children[cursorLocation]);
+}
 
 function updateValue(e) {
-    console.log("data is " + e.target.value);
-    if (keyTyped) {
-        let lowerCaseKey = e.target.value.toLowerCase();
-        var string = lowerCaseKey.split("");
-        if (string.length >= 0) {
-            var lastKey = string[string.length-1];
-            if (backspace) {
-                logContainer.removeChild(logContainer.lastElementChild);
-            } else if (lastKey === " ") {
-                addSpace(lastKey, logContainer);
-            } else if (lastKey === "\n") {
-                const enter = document.createElement("br");
-                logContainer.appendChild(enter);
-            } else if (alphabet.includes(lastKey)) {
-                addImage(lastKey, logContainer);
-                hover(lastKey);
-            }
-            console.log(string);
+    const txt = e.target.value.replace(regex, '').toLowerCase();
+    const cursorLoc = e.target.selectionStart;
+    console.log("text length " + txt.length);
+    const lastChar = txt[cursorLoc -1];
+    if (txt.length >= 0) {
+        if (e.inputType == "deleteContentBackward") {
+            console.log("backspace is pressed");
+            removeCharacter(cursorLoc);
+        } else if (lastChar === " ") {
+            console.log("space is pressed");
+            addSpace(cursorLoc);
+        } else if (lastChar === "\n") {
+            console.log("enter is pressed");
+            addBreak(cursorLoc);
+        } else if (!regex.test(e.target.value)) {
+            console.log("key is pressed");
+            addImage(lastChar, cursorLoc);
+            hover(lastChar);
         }
     }
 }
+
 
 function restrict(x) {
     x.value = x.value.replace(/[^a-z\s]/i, "");

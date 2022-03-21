@@ -13,8 +13,8 @@
             <div id="left-header">
                 <a href="index.html"><h1 id="title"></h1></a>
                 <nav>
-                    <a href="#" class="nav-item" id="about" onclick="toggleNavTxt('about')">About</a>
-                    <a href="#" class="nav-item" id="key" onclick="toggleNavTxt('key')">Instructions</a>
+                    <button class="nav-item" id="about" onclick="toggleNavTxt('about')">About</button>
+                    <button class="nav-item" id="key" onclick="toggleNavTxt('key')">Instructions</button>
                 </nav>
             </div>
             <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982).</p>
@@ -25,7 +25,7 @@
             <div id="log-container"></div>
             <div id="txt-container">
                 <textarea class="input" id="input" name="input" id="" cols="30" rows="4" placeholder="Click here to start" onclick="hideNavTxts()" onkeyup="restrict(this)"></textarea>
-                <a href="#" class="txt-link" id="clear" onclick="clearTypewriter()">Start again</a>
+                <button class="txt-link" id="clear" onclick="clearTypewriter()">Start again</button>
             </div>
         </section>
         <footer>
