@@ -73,7 +73,7 @@ function toggleNavTxt(id) {
 function addImage(i, cursorLocation) {
     const image = document.createElement("img");
     image.setAttribute("class", "img " + i);
-    image.setAttribute("src", "img-bw/" + i + "_bw.jpg?nf_resize=fit&w=112");
+    image.setAttribute("src", "img-bw/" + i + "_bw.jpg");
     logContainer.insertBefore(image, logContainer.children[cursorLocation -1]);
 }
 
@@ -133,10 +133,10 @@ function hover(input) {
         toggleNavTxt("img");
         var txt = imgTxts[input];
         document.getElementById("img-txt").innerHTML = txt;
-        image.setAttribute("src", "img/" + input + ".jpg?nf_resize=fit&w=112");
+        image.setAttribute("src", "img/" + input + ".jpg");
     }));
     document.querySelectorAll("." + input).forEach(image => image.addEventListener("mouseout", function() {
         document.getElementById("img-txt").innerHTML = "";
-        image.setAttribute("src", "img-bw/" + input + "_bw.jpg?nf_resize=fit&w=112");
+        image.setAttribute("src", "img-bw/" + input + "_bw.jpg");
     }));
 }
