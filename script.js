@@ -41,7 +41,7 @@ const imgTxts = {
 }
 
 let j = 0;
-const title = "<span class='italic'>ABC da Cana</span> Typewriter";
+const title = 'ABC da Cana Typewriter';
 const speedTitle = 75;
 
 function typeWriterTitle() {
