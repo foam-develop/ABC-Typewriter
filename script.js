@@ -41,14 +41,20 @@ const imgTxts = {
 }
 
 let j = 0;
-const title = 'ABC da Cana Typewriter';
+// const title = 'Typewriter';
+const title1 = 'ABC da Cana ';
+const title2 = 'Typewriter';
+const fullTitle = title1 + title2;
 const speedTitle = 75;
 
 function typeWriterTitle() {
-    if (j < title.length) {
-      document.getElementById("title").innerHTML += title.charAt(j);
-      j++;
-      setTimeout(typeWriterTitle, speedTitle);
+    if (j < fullTitle.length) {
+        document.getElementById("title1").innerHTML += title1.charAt(j);
+        if (j >= title1.length && j < fullTitle.length) {
+            document.getElementById("title2").innerHTML += fullTitle.charAt(j);
+        }
+        j++;
+        setTimeout(typeWriterTitle, speedTitle);
     }
   }
 
