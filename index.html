@@ -21,24 +21,24 @@
             <div id="left-header">
                 <a href="index.html"><h1 id="title"></h1></a>
                 <nav>
-                    <button class="nav-item" id="about" onclick="toggleNavTxt('about')">About</button>
-                    <button class="nav-item" id="key" onclick="toggleNavTxt('key')">Instructions</button>
+                    <button class="nav-item" id="about" onclick="toggleNavTxt('about')">about</button>
+                    <button class="nav-item" id="key" onclick="toggleNavTxt('key')">instructions</button>
                 </nav>
             </div>
-            <p class="nav-txt" id="about-txt">ABC da Cana Typewriter is a browser-based application that allows you to type a short message with the photographs of the ABC da Cana series by artist Jonathas de Andrade (Maceió, Brazil, 1982).</p>
-            <p class="nav-txt" id="key-txt">Use lowercase a-z, space, backspace and enter keys to type your message.<br>No numbers, special characters or autocorrect.<br>Click 'Start again' for a clean slate.<br>Hover over each image to learn more about <span class="italic">ABC da Cana</span> (2014), the artist and the exhibition at Foam photography museum Amsterdam.</p>
+            <p class="nav-txt" id="about-txt"><span class="italic">ABC da Cana</span> Typewriter is a browser-based application that allows you to type a short message with the photographs of the <span class="italic">ABC da Cana</span> series by artist Jonathas de Andrade (Maceió, Brazil, 1982).</p>
+            <p class="nav-txt" id="key-txt">Use lowercase a-z, space, backspace and enter keys to type your message.<br>No numbers, special characters or autocorrect.<br>Click 'Start again' for a clean slate.<br>Hover over each image to learn more about <span class="italic">ABC da Cana</span> (2014), the artist and the exhibition at Foam Fotografiemuseum Amsterdam.</p>
             <p class="nav-txt" id="img-txt"></p>
         </header>
         <section id="content">
             <div id="log-container"></div>
             <div id="txt-container">
                 <textarea class="input" id="input" name="input" id="" cols="30" rows="4" placeholder="Click here to start" onclick="hideNavTxts()" onkeyup="restrict(this)"></textarea>
-                <button class="txt-link" id="clear" onclick="clearTypewriter()">Start again</button>
+                <button class="txt-link" id="clear" onclick="clearTypewriter()">start again</button>
             </div>
         </section>
         <footer>
-            <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit Next Level: Jonathas de Andrade <span class="italic">Staging Resistance</span> at Foam Amsterdam</a></p>
-            <p>&#169; <a href="http://www.jonathasdeandrade.com.br/" target="_blank" class="footer-link">Jonathas de Andrade</a> | Foam Amsterdam</p>
+            <p><a href="https://www.foam.org/nl/events/next-level-jonathas-de-andrade" target="_blank">Visit <span class="italic">Next Level: Jonathas de Andrade - Staging Resistance</span> at Foam</a></p>
+            <p>&#169; <a href="http://www.jonathasdeandrade.com.br/" target="_blank" class="footer-link">Jonathas de Andrade</a> | Foam Fotografiemuseum Amsterdam</p>
         </footer>
     </section>
     <script src="script.js"></script>
